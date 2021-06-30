@@ -8,8 +8,6 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
     component: bootnode
-  annotations:
-    cloud.google.com/load-balancer-type: Internal
 spec:
   selector:
     app: {{ template "ethereum.name" . }}
