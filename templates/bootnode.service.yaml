@@ -8,12 +8,15 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
     component: bootnode
+  annotations:
+    cloud.google.com/load-balancer-type: Internal
 spec:
   selector:
     app: {{ template "ethereum.name" . }}
     release: {{ .Release.Name }}
     component: bootnode
   clusterIP: None
+  externalTrafficPolicy: Local
   ports:
   - name: discovery
     port: 30301
