@@ -18,5 +18,8 @@ spec:
   - name: discovery
     port: 30301
     protocol: UDP
+  - name: discovery
+    port: 30301
+    protocol: TCP
   - name: http
     port: 80
