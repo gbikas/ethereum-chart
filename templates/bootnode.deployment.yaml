@@ -61,7 +61,7 @@ spec:
         command: ["/bin/sh"]
         args:
         - "-c"
-        - "bootnode --genkey=/etc/bootnode/node.key"
+        - "bootnode --genkey=/etc/bootnode/node.key -writeaddress"
         volumeMounts:
         - name: data
           mountPath: /etc/bootnode
